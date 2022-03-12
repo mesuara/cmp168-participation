@@ -74,10 +74,21 @@ class Infant extends Person{
 // printDetails() : void		@Override //see NOTE below for formatting
   @Override 
   public void printDetails(){
-    
+    super.printDetails();
+    		System.out.printf("Infant: Number of Toys: %4d | InfantToys: \n", numBabyToys);
+		for (int i=0; i < numBabyToys; i++) {
+			System.out.println(toys[i].toString());
+		}
   }
 // toString() : String		@Override //see NOTE below for formatting
-  
+  	@Override
+    public String toString() {
+        String basicStr = super.toString() + String.format("Infant: Number of Toys: %4d | Infant Toys:\n", numBabyToys);
+        for (int i = 0; i < numBabyToys; i++) {
+            basicStr = basicStr + toys[i].infantToyName + ", " + toys[i].infantToyRating + "; ";
+        }
+        return basicStr;
+    }
   
   
   
