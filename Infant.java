@@ -50,9 +50,32 @@ class Infant extends Person{
 		return numBabyToys;
 	}
 // getInfantToyName(int) : String
+  public String getInfantToyName(int num){
+    return (num >= 0 && num < numBabyToys) ?toys[num].infantToyName : "invalid index " + num;
+    }
+  
 // getInfantToyRating(int) : int
+
+  public int getInfantToyRating(int num){
+    return (num >= 0 && num < numBabyToys) ?toys[num].infantToyRating : -1;
+  }
 // getHighestInfantToyRating(): int	//should return the highest rating, or 0 if the array is empty
+
+  public int getHighestInfantToyRating(){
+    int max = 0;
+    for(int i =0; i < numBabyToys; i++){
+      if(max < toys[i].infantToyRating){
+        max = toys[i].infantToyRating;
+      }
+    }
+
+    return max;
+  }
 // printDetails() : void		@Override //see NOTE below for formatting
+  @Override 
+  public void printDetails(){
+    
+  }
 // toString() : String		@Override //see NOTE below for formatting
   
   
