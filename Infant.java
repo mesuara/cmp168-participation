@@ -20,12 +20,15 @@ class Infant extends Person{
   private int numBabyToys;
 
   public Infant(){
+    super();
     toys = new InfantToy[10];
     numBabyToys = 0;
   }
 
   public Infant(String name, int year, double wei, double hei, char gen, int num){
         super(name, year, wei, hei, gen,num, 0);
+    		numBabyToys = 0;
+		    toys = new InfantToy [10];
     
   }
 // addInfantToy(String,int)			//uses the InfantToy constructor, do not resize array
