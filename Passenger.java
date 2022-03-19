@@ -1,3 +1,4 @@
+
 public abstract class Passenger implements Eater {
   private String name;
   private int birthYear;
